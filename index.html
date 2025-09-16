@@ -1,48 +1,287 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Servicios Profesionales - Javier Serra</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Javier Omar Serra — Servicios Profesionales</title>
+  <meta name="description" content="Consultoría en integraciones, automatización y APIs. Javier Omar Serra — soluciones técnicas para pymes y proyectos digitales." />
+  <meta name="author" content="Javier Omar Serra" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Javier Omar Serra — Consultoría en Integraciones" />
+  <meta property="og:description" content="Automatización, APIs, WhatsApp Business, integraciones con CRMs y plataformas cloud." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://javieromarserra.com.ar/" />
+
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
-    header { text-align: center; margin-bottom: 40px; }
-    h1 { color: #333; }
-    h2 { margin-top: 30px; color: #444; }
-    a { color: #0066cc; }
+    :root{--accent:#0f766e;--muted:#6b7280;--bg:#0f172a}
+    html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,'Helvetica Neue',Arial;line-height:1.5;color:#0b1220}
+    body{background:#f8fafc}
+    .container{max-width:1100px;margin:40px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#06b6d4);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    nav a{margin-left:16px;color:var(--muted);text-decoration:none}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start;margin-top:28px}
+    .card{background:white;border-radius:12px;padding:20px;box-shadow:0 6px 20px rgba(11,18,32,0.06)}
+    h1{margin:0;font-size:28px}
+    p.lead{color:var(--muted);margin-top:10px}
+
+    /* Services grid */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+    .service{padding:14px;border-radius:10px;border:1px solid #eef2f7}
+    .service h4{margin:0 0 6px 0}
+    .muted{color:var(--muted)}
+
+    /* Projects */
+    .projects{display:grid;grid-template-columns:1fr;gap:12px}
+    .project{display:flex;gap:14px;align-items:flex-start}
+    .project .meta{font-size:12px;color:var(--muted)}
+
+    /* Publications */
+    .posts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+    .post{padding:12px;border-radius:8px;border:1px solid #eef2f7;background:#fff}
+
+    /* Testimonials */
+    .testi-wrap{position:relative;overflow:hidden}
+    .testi{min-height:120px;padding:18px}
+
+    footer{margin-top:30px;padding:16px 0;color:var(--muted);font-size:14px;text-align:center}
+
+    /* Responsive */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr}
+      .logo{width:48px;height:48px}
+    }
+
+    /* Buttons */
+    .btn{display:inline-block;padding:10px 14px;border-radius:8px;background:var(--accent);color:white;text-decoration:none}
+    .btn-outline{border:1px solid var(--accent);color:var(--accent);background:transparent}
+
+    /* simple nav anchor highlight */
+    .cta{display:flex;gap:8px}
+
+    /* small utilities */
+    .small{font-size:13px}
   </style>
 </head>
 <body>
-  <header>
-    <h1>Javier Omar Serra</h1>
-    <p>Proveedor de servicios profesionales en tecnología y soluciones digitales.</p>
-    <p><a href="mailto:javier.serra.emp@gmail.com">📩 Contacto por email</a></p>
-    <p><a href="https://www.facebook.com/profile.php?id=100095044045658" target="_blank">🌐 Perfil en Facebook</a></p>
-  </header>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">JS</div>
+        <div>
+          <div style="font-weight:700">Javier Omar Serra</div>
+          <div class="small muted">Integraciones · APIs · Automatización</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#servicios">Servicios</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#publicaciones">Publicaciones</a>
+        <a href="#contacto" class="btn-outline" style="padding:8px 12px;border-radius:8px;margin-left:12px">Contactar</a>
+      </nav>
+    </header>
 
-  <section>
-    <h2>Sobre mí</h2>
-    <p>Soy consultor en integración de APIs, automatización de procesos y servicios digitales para empresas. Acompaño a mis clientes en la implementación de soluciones como WhatsApp Business API, Meta Business y HubSpot.</p>
-  </section>
+    <main>
+      <section class="hero">
+        <div>
+          <div class="card">
+            <h1>Consultoría técnica para transformar procesos con APIs y automatizaciones</h1>
+            <p class="lead">Ayudo a empresas y equipos a integrar herramientas, diseñar arquitecturas escalables y automatizar flujos operativos para ahorrar tiempo y reducir errores. Trabajo con WhatsApp Business API, CRMs, proveedores en la nube y soluciones a medida.</p>
 
-  <section>
-    <h2>Servicios</h2>
-    <ul>
-      <li>Integración de WhatsApp Business API</li>
-      <li>Automatización de marketing y CRM (HubSpot, Meta)</li>
-      <li>Consultoría en infraestructura en la nube (AWS)</li>
-      <li>Desarrollo de soluciones personalizadas</li>
-    </ul>
-  </section>
+            <div style="margin-top:14px;display:flex;gap:8px">
+              <a class="btn" href="#contacto">Charlemos — agenda</a>
+              <a class="btn-outline" href="#proyectos">Ver proyectos</a>
+            </div>
 
-  <section>
-    <h2>Política de Privacidad</h2>
-    <p>Los datos compartidos a través de formularios o canales de contacto (como WhatsApp Business API) serán utilizados únicamente con fines de comunicación profesional. No compartimos ni comercializamos tus datos con terceros.</p>
-  </section>
+            <div style="margin-top:18px;color:var(--muted);font-size:14px">
+              <strong>Servicios clave:</strong>
+              <div class="grid" style="margin-top:10px">
+                <div class="service"><h4>Integraciones & APIs</h4><div class="muted">Diseño y desarrollo, webhooks, seguridad y escalabilidad.</div></div>
+                <div class="service"><h4>Automatización</h4><div class="muted">Bots, workflows y orquestación entre sistemas.</div></div>
+                <div class="service"><h4>WhatsApp Business</h4><div class="muted">Integración con API, plantillas y gestión de conversaciones.</div></div>
+                <div class="service"><h4>Cloud / Infra</h4><div class="muted">Despliegue, CI/CD y monitorización en la nube.</div></div>
+              </div>
+            </div>
 
-  <section>
-    <h2>Términos de Uso</h2>
-    <p>Este sitio web y los canales de mensajería asociados son exclusivamente informativos. Los servicios ofrecidos se brindan en base a acuerdos previos con cada cliente. La información enviada por WhatsApp es unidireccional y no implica una relación contractual hasta que se formalice por los canales correspondientes.</p>
-  </section>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card">
+            <h3>Contacto</h3>
+            <p class="muted">Email: <a href="mailto:info@javieromarserra.com.ar">info@javieromarserra.com.ar</a></p>
+            <p class="muted">LinkedIn: <a href="https://www.linkedin.com/in/javieromarserra" target="_blank" rel="noopener">/in/javieromarserra</a></p>
+            <div style="margin-top:10px">
+              <a class="btn" href="mailto:info@javieromarserra.com.ar">Enviar email</a>
+            </div>
+          </div>
+
+          <div style="height:14px"></div>
+
+          <div class="card">
+            <h4>Servicios rápidos</h4>
+            <ul class="muted" style="padding-left:16px;margin:8px 0">
+              <li>Revisión de arquitectura</li>
+              <li>PoC de integración (48–72h)</li>
+              <li>Auditoría de seguridad de webhooks</li>
+            </ul>
+          </div>
+        </aside>
+      </section>
+
+      <!-- Projects / Cases -->
+      <section id="proyectos" style="margin-top:26px">
+        <h2>Proyectos y casos de éxito</h2>
+        <div class="projects">
+
+          <!-- Each .project below is a template: replace placeholder text with real cases. -->
+          <article class="card project">
+            <div style="flex:1">
+              <h3>Integración de WhatsApp Business con CRM para una PyME</h3>
+              <div class="meta">Enero 2025 · Integración · CRM · Webhooks</div>
+              <p class="muted" style="margin-top:8px">Problema: El equipo gestionaba leads manualmente. Solución: Implementé una integración automática que guarda conversaciones como oportunidades y notifica al equipo. Resultado: reducción del 40% en tiempo de respuesta y aumento en conversión.</p>
+              <p style="margin-top:8px"><a href="#" class="small">Ver detalles</a></p>
+            </div>
+          </article>
+
+          <article class="card project">
+            <div style="flex:1">
+              <h3>PoC de automatización para atención al cliente</h3>
+              <div class="meta">Octubre 2024 · Bots · Workflows</div>
+              <p class="muted" style="margin-top:8px">Implementación de un flujo automatizado para preguntas frecuentes y reenvío a agentes en horarios pico. Resultado: 30% menos tickets repetidos.</p>
+            </div>
+          </article>
+
+          <!-- Add more projects here -->
+
+        </div>
+      </section>
+
+      <!-- Publications / LinkedIn posts -->
+      <section id="publicaciones" style="margin-top:26px">
+        <h2>Publicaciones & pensamientos</h2>
+        <p class="muted">Extractos recientes de LinkedIn y notas técnicas. Abre los enlaces para leer en la plataforma original.</p>
+
+        <div class="posts" style="margin-top:12px">
+          <!-- Replace these cards with your LinkedIn posts: paste the post title, a 1-2 line excerpt and link to the post. -->
+          <article class="post">
+            <h4>Cómo diseñar webhooks seguros</h4>
+            <div class="small muted">Mar 2025 · Seguridad · APIs</div>
+            <p class="muted" style="margin-top:8px">Resumen: comprobaciones de firma, reintentos idempotentes y límites de tasa. <a href="#" class="small">Leer en LinkedIn</a></p>
+          </article>
+
+          <article class="post">
+            <h4>Lecciones aprendidas integrando WhatsApp Business</h4>
+            <div class="small muted">Dic 2024 · Integraciones</div>
+            <p class="muted" style="margin-top:8px">Resumen: plantillas, flujo de aprobación y consideraciones de privacidad. <a href="#" class="small">Leer en LinkedIn</a></p>
+          </article>
+
+          <!-- Placeholder for more posts -->
+        </div>
+
+        <!-- Helpful note for editing: -->
+        <!-- To add LinkedIn content: paste a short title, a 1-2 line excerpt and the post URL into each .post card above. You can also embed LinkedIn posts by using LinkedIn's embed code where allowed. -->
+      </section>
+
+      <!-- Testimonials -->
+      <section id="testimonios" style="margin-top:26px">
+        <h2>Recomendaciones</h2>
+        <div class="card testi-wrap">
+          <div id="testiInner" style="display:flex;transition:transform .45s ease">
+            <div class="testi" style="min-width:100%">
+              <strong>Cliente A</strong>
+              <p class="muted">"Excelente trabajo en la integración. Redujo los tiempos de respuesta y mejoró el tracking de leads."</p>
+              <div class="small muted">— Gerente de Tecnología</div>
+            </div>
+            <div class="testi" style="min-width:100%">
+              <strong>Cliente B</strong>
+              <p class="muted">"Rápido, claro y eficiente. Nos ayudó a lanzar un MVP en menos de un mes."</p>
+              <div class="small muted">— Founder</div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:8px;display:flex;gap:8px">
+          <button id="prev" class="btn-outline">Anterior</button>
+          <button id="next" class="btn">Siguiente</button>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="servicios" style="margin-top:26px">
+        <h2>Habilidades y herramientas</h2>
+        <div class="card">
+          <p class="muted">API design · Webhooks · Node.js / Python · AWS / GCP · Docker · PostgreSQL · Integración con CRMs · WhatsApp Business API · Infraestructura y despliegue</p>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contacto" style="margin-top:26px">
+        <h2>Contacto</h2>
+        <div class="card" style="display:flex;gap:16px;align-items:flex-start">
+          <form id="contactForm" style="flex:1">
+            <label class="small">Nombre</label><br>
+            <input name="name" required style="width:100%;padding:8px;border-radius:6px;border:1px solid #e6eef8;margin-top:6px"><br><br>
+            <label class="small">Email</label><br>
+            <input name="email" type="email" required style="width:100%;padding:8px;border-radius:6px;border:1px solid #e6eef8;margin-top:6px"><br><br>
+            <label class="small">Mensaje</label><br>
+            <textarea name="message" required rows="4" style="width:100%;padding:8px;border-radius:6px;border:1px solid #e6eef8;margin-top:6px"></textarea><br><br>
+            <button type="submit" class="btn">Enviar</button>
+          </form>
+
+          <div style="width:320px">
+            <div class="muted">También podés escribir a:</div>
+            <div style="margin-top:8px"><a href="mailto:info@javieromarserra.com.ar" class="btn-outline">info@javieromarserra.com.ar</a></div>
+
+            <div style="margin-top:16px" class="muted">
+              <strong>Disponibilidad:</strong>
+              <div>Consultor freelance — proyectos por contrato y asesorías.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      © Javier Omar Serra — <a href="https://javieromarserra.com.ar/">javieromarserra.com.ar</a> · <span class="muted">Reservados todos los derechos</span>
+    </footer>
+  </div>
+
+  <script>
+    // Simple testimonials slider
+    (function(){
+      const inner = document.getElementById('testiInner');
+      const items = inner.children.length;
+      let idx = 0;
+      document.getElementById('next').addEventListener('click',()=>{ idx=(idx+1)%items; inner.style.transform=`translateX(-${idx*100}%)`; });
+      document.getElementById('prev').addEventListener('click',()=>{ idx=(idx-1+items)%items; inner.style.transform=`translateX(-${idx*100}%)`; });
+    })();
+
+    // Contact form: lightweight fetch to send to server or mailto fallback
+    document.getElementById('contactForm').addEventListener('submit', async function(e){
+      e.preventDefault();
+      const data = new FormData(this);
+      const payload = Object.fromEntries(data.entries());
+
+      // Default fallback: open mailto if no backend
+      const subject = encodeURIComponent('Contacto desde web: '+payload.name);
+      const body = encodeURIComponent(payload.message + '\n\n' + payload.email);
+      window.location.href = `mailto:info@javieromarserra.com.ar?subject=${subject}&body=${body}`;
+    });
+  </script>
+
+  <!-- JSON-LD for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Javier Omar Serra",
+    "url": "https://javieromarserra.com.ar/",
+    "sameAs": ["https://www.linkedin.com/in/javieromarserra"],
+    "jobTitle": "Consultor de Integraciones y Automatización"
+  }
+  </script>
 </body>
 </html>
